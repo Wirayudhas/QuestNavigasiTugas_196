@@ -117,5 +117,23 @@ fun FormIsian(
     }
 }
 
+@Composable
+private fun DialogRow(k: String, v: String) {
+    Row(
+        Modifier.fillMaxWidth(),
+        horizontalArrangement = Arrangement.SpaceBetween
+    ) {
+        Text(k)
+        Text(v, fontWeight = FontWeight.SemiBold)
+    }
+}
 
+@Composable
+private fun Radio(label: String, selected: Boolean, onSelect: () -> Unit) {
+    Row {
+        RadioButton(selected = selected, onClick = onSelect)
+        Spacer(Modifier.width(4.dp))
+        Text(label, modifier = Modifier.padding(top = 10.dp))
+    }
+}
 
