@@ -29,4 +29,16 @@ fun FormIsian(
         topBar = {
             TopAppBar(title = { Text("Formulir Pendaftaran") })
         }
-    )
+    ){ pad ->
+        Column(
+            modifier = Modifier
+                .padding(pad)
+                .padding(dimensionResource(id = R.dimen.padding_medium))
+                .fillMaxSize(),
+            verticalArrangement = Arrangement.SpaceBetween
+        ) {
+            Column(
+                verticalArrangement = Arrangement.spacedBy(
+                    dimensionResource(id = R.dimen.padding_small)
+                )
+            )
