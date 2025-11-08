@@ -23,4 +23,6 @@ fun FormIsian(
     var alamat by rememberSaveable { mutableStateOf("") }
     var showDialog by remember { mutableStateOf(false) }
 
+    val valid = nama.isNotBlank() && gender.isNotBlank() && status.isNotBlank() && alamat.isNotBlank()
+
 
