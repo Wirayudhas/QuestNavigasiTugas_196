@@ -41,4 +41,13 @@ fun FormIsian(
                 verticalArrangement = Arrangement.spacedBy(
                     dimensionResource(id = R.dimen.padding_small)
                 )
-            )
+            ){
+                OutlinedTextField(
+                    value = nama,
+                    onValueChange = { nama = it },
+                    label = { Text("NAMA LENGKAP") },
+                    singleLine = true,
+                    modifier = Modifier.fillMaxWidth()
+                )
+
+
