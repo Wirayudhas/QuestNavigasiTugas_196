@@ -93,5 +93,29 @@ fun FormIsian(
         }
     }
 
+    if (showDialog) {
+        AlertDialog(
+            onDismissRequest = {},
+            confirmButton = {
+                TextButton(
+                    onClick = {
+                        showDialog = false
+                        onSelesaiDialog()
+                    }
+                ) { Text("OK") }
+            },
+            title = { Text("Data Berhasil Disimpan") },
+            text = {
+                Column(verticalArrangement = Arrangement.spacedBy(6.dp)) {
+                    DialogRow("Nama", nama)
+                    DialogRow("Jenis Kelamin", gender)
+                    DialogRow("Status", status)
+                    DialogRow("Alamat", alamat)
+                }
+            }
+        )
+    }
+}
+
 
 
