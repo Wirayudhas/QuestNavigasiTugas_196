@@ -25,4 +25,8 @@ fun FormIsian(
 
     val valid = nama.isNotBlank() && gender.isNotBlank() && status.isNotBlank() && alamat.isNotBlank()
 
-
+    Scaffold(
+        topBar = {
+            TopAppBar(title = { Text("Formulir Pendaftaran") })
+        }
+    )
