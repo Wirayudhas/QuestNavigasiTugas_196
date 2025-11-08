@@ -50,4 +50,25 @@ fun FormIsian(
                     modifier = Modifier.fillMaxWidth()
                 )
 
+                Text("JENIS KELAMIN")
+                Row(horizontalArrangement = Arrangement.spacedBy(16.dp)) {
+                    Radio("Laki-laki", gender == "Laki-laki") { gender = "Laki-laki" }
+                    Radio("Perempuan", gender == "Perempuan") { gender = "Perempuan" }
+                }
+
+                Text("STATUS PERKAWINAN")
+                Row(horizontalArrangement = Arrangement.spacedBy(16.dp)) {
+                    Radio("Jejaka", status == "Jejaka") { status = "Jejaka" }
+                    Radio("Lajang", status == "Lajang") { status = "Lajang" }
+                    Radio("Duda", status == "Duda") { status = "Duda" }
+                }
+
+                OutlinedTextField(
+                    value = alamat,
+                    onValueChange = { alamat = it },
+                    label = { Text("ALAMAT") },
+                    modifier = Modifier.fillMaxWidth()
+                )
+            }
+
 
