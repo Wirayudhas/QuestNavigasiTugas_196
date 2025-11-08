@@ -70,5 +70,28 @@ fun FormIsian(
                     modifier = Modifier.fillMaxWidth()
                 )
             }
+            Row(
+                Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.spacedBy(
+                    dimensionResource(id = R.dimen.padding_small)
+                )
+            ) {
+                OutlinedButton(
+                    onClick = onBeranda,
+                    modifier = Modifier.weight(1f)
+                ) { Text("Beranda") }
+
+                Button(
+                    onClick = {
+                        onSubmit(nama, gender, status, alamat)
+                        showDialog = true
+                    },
+                    enabled = valid,
+                    modifier = Modifier.weight(1f)
+                ) { Text("Submit") }
+            }
+        }
+    }
+
 
 
